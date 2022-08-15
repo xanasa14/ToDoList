@@ -34,6 +34,7 @@ export default function App() {
             <View style={styles.goalItem} key={goal}>
             <Text style={styles.goalText}>
               {goal}
+              
             </Text>
         </View>
         ))}
