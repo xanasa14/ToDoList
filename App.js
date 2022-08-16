@@ -17,9 +17,8 @@ export default function App() {
   }
   return (
     <View style={styles.appContainer}>
+        
         <View style={styles.inputContainer}>
-
-
           <TextInput 
             style={styles.textInputContainer} 
             placeholder="Your course goals..."
@@ -27,19 +26,19 @@ export default function App() {
           />
           <Button title="Add Goal" onPress={addGoalHandler}/>
       </View>
+
       <View style={styles.goalsContainer}>
-      <ScrollView alwaysBounceVertical={false}> 
-        
+      <ScrollView alwaysBounceVertical={false}>   
           {courseGoals.map((goal) => (
             <View style={styles.goalItem} key={goal}>
             <Text style={styles.goalText}>
               {goal}
-              
             </Text>
         </View>
         ))}
       </ScrollView>
       </View>
+      
     </View>
 
   );
