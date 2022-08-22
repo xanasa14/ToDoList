@@ -5,6 +5,7 @@ import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
 
 
+
 export default function App() {
   const [modalIsVisible, setModalVisible] = useState(false);
   const [courseGoals, setCourseGoals] = useState([]);
@@ -32,10 +33,12 @@ function deleteGoalHandler(id){
 }
 
   return (
+  <>
+    <StatusBar style="light"/>
     <View style={styles.appContainer}>
     <Button 
       title="Add New Goal" 
-      color="#5e0acc"
+      color="#a065ac"
       onPress={startAddGoalHandler}   
       />
       <GoalInput visible={modalIsVisible} onAddGoal={addGoalHandler} onCancel={endAddGoalHandler} />
@@ -62,6 +65,7 @@ function deleteGoalHandler(id){
       </View>
 
     </View>
+  </>
 
   );
 }
